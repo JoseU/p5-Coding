@@ -46,7 +46,7 @@ function setup() {
   frameRate(30);
 
   //socket.io
-  socket = io.connect('172.26.37.2:3000');
+  socket = io.connect('192.168.0.105.:3000');
 
   socket.on('mouse', newMouse);
   socket.on('noteOn', newNote);
@@ -58,9 +58,7 @@ function setup() {
   background(75);
   noFill();
   fullscreen();
-  ellipseMode(CENTER);
-
-
+  rectMode(CENTER);
 
 }
 
@@ -134,7 +132,7 @@ function draw() {
       if (mouseX >= xMod[x] && mouseX <= xMod[x + 1] && mouseY >= yMod[y] && mouseY <= yMod[y + 1]) {
         //print("rect" + x)
         fill(colorsLerp1[countColors % 3]);
-        ellipse(xMod[x], yMod[y], size, size);
+        rect(xMod[x], yMod[y], size, size);
       };
 
     };
@@ -146,7 +144,7 @@ function draw() {
       if (x2 >= xMod[x] && x2 <= xMod[x + 1] ){
         //print("rect" + x)
         fill(colorsLerp2[countColors % 3]);
-        ellipse(xMod[x], yMod[y], size, size);
+        rect(xMod[x], yMod[y], size, size);
       };
 
     };
