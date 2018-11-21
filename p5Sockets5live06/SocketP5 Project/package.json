@@ -1,0 +1,21 @@
+{
+  "name": "sockets_p5js",
+  "version": "1.0.0",
+  "description": "Example to integrate p5.js with sockets.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sockets",
+    "p5.js"
+  ],
+  "author": "José Urgilés",
+  "license": "ISC",
+  "dependencies": {
+    "ccapture.js": "^1.1.0",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
